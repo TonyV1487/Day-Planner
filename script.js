@@ -10,16 +10,28 @@ $(document).ready(function() {
       // Create date div
       var dateDiv = $(`<div class="row">`);
       console.log(dateDiv);
-      // Create create columns
-      var timeCol = $(`<div class="col-2">Col 1</div>`);
-      var taskCol = $(`<div class="col-8">Col 2</div>`);
-      var saveCol = $(`<div class="col-2">Col 3</div>`);
+      // Create design cols
+      var leftCol = $(`<div class="col-2">Col 1</div>`);
+      var midCol = $(`<div class="col-8"></div>`);
+      var rightCol = $(`<div class="col-2">Col 3</div>`);
+
+      //   Create content div
+      var contentDiv = $(`<div class="row">`);
+
+      // Create columns
+      var timeCol = $(`<div class="col-2" id="time">Time${i}</div>`);
+      var taskCol = $(`<div class="col-8" id="task">Task</div>`);
+      var saveCol = $(`<div class="col-2" id="save">Save</div>`);
 
       // Append
 
-      dateDiv.append(timeCol);
-      dateDiv.append(taskCol);
-      dateDiv.append(saveCol);
+      dateDiv.append(leftCol);
+      dateDiv.append(midCol);
+      dateDiv.append(rightCol);
+      midCol.append(contentDiv);
+      contentDiv.append(timeCol);
+      contentDiv.append(taskCol);
+      contentDiv.append(saveCol);
       $('#todoList').append(dateDiv);
     }
   }
