@@ -2,7 +2,8 @@ $(document).ready(function() {
   // Setup var
   var plannerStart = 9;
   var plannerEnd = 18;
-  // var dailyTasks = JSON.parse(localStorage.getItem('myDay')) || {};
+  var dailyTasks = JSON.parse(localStorage.getItem('myDay')) || {};
+  console.log(dailyTasks);
 
   // Add today's date to header
   function addTodaysDate() {
@@ -56,7 +57,7 @@ $(document).ready(function() {
     }
     taskBackground();
     changeTimeFormat();
-    // taskFill();
+    taskFill();
   }
 
   // Change the valus into number formats for each time slot task
@@ -115,21 +116,20 @@ $(document).ready(function() {
 
   // Fill tasks from local storage
   function taskFill() {
-    for (i = plannerStart; i < plannerStart; i++) {
-      $(i).val(dailyTasks[i]);
+    for (i = plannerStart; i < plannerEnd; i++) {
+      $(`#${i}`).text(dailyTasks[i]);
     }
   }
 
   // CLick event for saving tasks to local storage
-  $('.js-save').on('click', function() {
-    alert('run');
+  $(document).on('click', '.js-save', function() {
     // get the key and the value
-    // var key = $(this).data('key');
-    // console.log(key);
+    var key = $(this).data('key');
+    console.log(key);
 
-    // var value = $(`#${key}`).val();
-    // dailyTasks[key] = value;
-    // localStorage.setItem('myDay', JSON.stringify(dailyTasks));
+    var value = $(`#${key}`).val();
+    dailyTasks[key] = value;
+    localStorage.setItem('myDay', JSON.stringify(dailyTasks));
   });
 
   addTodaysDate();
