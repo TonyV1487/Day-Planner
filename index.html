@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Day Planner</title>
+    <!-- Adding normalize css -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <!-- Adding jQuery -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <!-- Adding bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- Adding local CSS file -->
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Adding local JS file - moment -->
+    <script type="text/javascript" src="./moment.js" /></script>
+    <!-- Adding fontawesome for SVG -->
+    <script
+      src="https://kit.fontawesome.com/02af7af715.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Adding local JS file - script -->
+    <script type="text/javascript" src="./script.js"></script>
   </head>
   <body>
     <div class="container-fluid" id="todoList">
       <div class="row header">
         <div class="col-2"></div>
-        <div class="col-8 txtCenter btmBorder">
+        <div class="col-8 txtCenter btmBorder" id="header">
           <h1>Work Day Scheduler</h1>
-          <div>A simple work day scheduler</div>
         </div>
         <div class="col-2"></div>
       </div>
     </div>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
-
-    <script type="text/javascript" src="./script.js"></script>
+    
   </body>
 </html>

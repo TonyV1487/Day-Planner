@@ -1,6 +1,51 @@
 .btmBorder {
   border-bottom-style: double;
 }
+.contentRow {
+  height: 50px;
+}
+.contentCenter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.font24 {
+  font-size: 24px;
+}
+.padZero {
+  padding: 0px;
+}
+.saveBtn {
+  background-color: firebrick;
+  border: solid;
+  border-radius: 0px 12px 12px 0px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.task_bg_current {
+  background-color: goldenrod;
+  height: 100%;
+  width: 100%;
+}
+.task_bg_future {
+  background-color: lightgreen;
+  height: 100%;
+  width: 100%;
+}
+.task_bg_past {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+}
+.time {
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  height: 100%;
+  text-align: right;
+  width: 100%;
+}
 .txtCenter {
   text-align: center;
 }
